@@ -4,7 +4,7 @@ export PATH="$PATH:/sbin:/usr/sbin/"
 
 cd /var/lib/firstboot
 
-./install-suse-cloud.sh
+./install-ses.sh
 ./setup-node-sh-vars.sh
 
 # why is this needed?!
