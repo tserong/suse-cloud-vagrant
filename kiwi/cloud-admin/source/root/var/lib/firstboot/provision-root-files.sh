@@ -15,4 +15,3 @@ cd /var/lib/firstboot
 mkdir -p /root/bin
 #mv setup-node-aliases.sh /root/bin
 
-mv *.yaml /root
