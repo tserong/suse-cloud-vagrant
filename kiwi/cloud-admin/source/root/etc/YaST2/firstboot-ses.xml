@@ -110,10 +110,10 @@
     <texts>
       <congratulate>
         <label>
-          &lt;p&gt;The installation of SUSE Cloud admin server has completed successfully.&lt;/p&gt;
-          &lt;p&gt;To finish setting up SUSE Cloud you will need to define the network by
+          &lt;p&gt;The installation of SUSE Enterprise Storage Crowbar admin server has completed successfully.&lt;/p&gt;
+          &lt;p&gt;To finish setting up SUSE Enterprise Storage you will need to define the network by
           executing &lt;tt&gt;yast2 crowbar&lt;/tt&gt;.
-          Please refer to the SUSE Cloud Deployment Guide for more information.&lt;/p&gt;
+          Please refer to the SUSE Enterprise Storage documentation for more information.&lt;/p&gt;
           &lt;p&gt;Only when your network settings are all defined, continue the crowbar install
           by typing: &lt;/p&gt;
           &lt;p&gt;screen go&lt;/p&gt;

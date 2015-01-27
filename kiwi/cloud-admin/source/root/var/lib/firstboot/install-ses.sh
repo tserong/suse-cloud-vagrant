@@ -10,7 +10,7 @@ export REPOS_SKIP_CHECKS="SLES11_SP3 SLES11-SP3-Pool"
 # from eth0 because of the above patch.
 export STY="dummy"
 
-# ensure cloud_admin pattern is fully installed
+# ensure storage_admin pattern is fully installed
 # otherwise the check in install-ses will fail.
 zypper -n install -t pattern storage_admin
 
