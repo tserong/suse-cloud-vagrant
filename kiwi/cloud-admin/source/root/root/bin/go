@@ -5,7 +5,9 @@ export PATH="$PATH:/sbin:/usr/sbin/"
 cd /var/lib/firstboot
 
 ./install-ses.sh
-./setup-node-sh-vars.sh
+
+# this is missing /tmp/node-sh-vars?
+# ./setup-node-sh-vars.sh
 
 # why is this needed?!
-rcapache2 restart
+#rcapache2 restart
