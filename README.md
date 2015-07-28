@@ -1,33 +1,24 @@
-# Vagrant resources for SUSE Cloud
+# SUSE Enterprise Storage Crowbar Admin Node Appliance
 
-This repository contains resources for rapid virtualized deployment of
-[SUSE Cloud](https://www.suse.com/products/suse-cloud/) via
-[Vagrant](http://www.vagrantup.com/).
+Rapid deployment of SUSE Enterprise Storage.  Not presently (2015-07-28)
+directly usable with only the code in this repo;
+kiwi/cloud-admin/source/root has a suitable root fs
+files for an SES-only appliance, but the kiwi xml template is outdated.
 
-## Contents
+The Vagrant bits and pieces are unchanged from
+https://github.com/SUSE-Cloud/suse-cloud-vagrant so probably aren't
+presently usable for SES-only deploys.
 
-*   Resources for [automatically preparing and presenting demos](demos/)
-    of functionality within SUSE Cloud - these essentially reduce the
-    task of setup to a one-line command.
-*   A [HOWTO guide](docs/HOWTO.md) documenting how to use Vagrant and
-    the provided [`Vagrantfile`](vagrant/Vagrantfile) to deploy a SUSE
-    Cloud environment of (by default) 4 VMs via a single `vagrant up`
-    command.  Use this instead of one of the [demos](demos/) if you
-    want more manual control over the setup of Crowbar barclamps and
-    OpenStack.
+Note that for SES-only deploys, we're only using the following networks:
 
-## Support, bugs, development etc.
+* admin
+* bmc
+* bmc_vlan
+* storage
 
-If you experience a bug or other issue, or want to check the list
-of known issues and other ongoing development, please refer to the
-[github issue tracker](https://github.com/SUSE-Cloud/suse-cloud-vagrant/issues/).
-
-## History
-
-These resources were originally built for
-[an OpenStack HA workshop session given on 2014/05/15 at the OpenStack summit in Atlanta](http://openstacksummitmay2014atlanta.sched.org/event/d3db2188dfed4459f8fbd03f5b405b81#.U4C6NXWx1Qo).
-Video, slides, and other material from that workshop are available
-[here](https://github.com/aspiers/openstacksummit2014-atlanta).
-
-They were further enhanced for
-[a further workshop on 2014/11/03 at the OpenStack summit in Paris](https://openstacksummitnovember2014paris.sched.org/event/70cf22bce26516e9d6ae4ae45e966954).
+nova_fixed, nova_floating, os_sdn and public are all unused and can be
+ignored.  To use a network other that 192.168.x.x, on firstboot,
+configure eth0 with the desired IP address, then once the admin node is up,
+ssh in, run `yast2 crowbar` and reconfigure admin, bmc, bmc_vlan and storage
+as desired, making sure to set the router, subnet address and ranges for
+each.
