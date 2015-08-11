@@ -37,8 +37,8 @@ if ! grep -q "^$ADMIN_IP " /etc/hosts; then
 fi
 
 echo "Enabling auto-start of ntp and ssh services on boot ..."
-chkconfig ntp on
-chkconfig sshd on
+systemctl enable ntpd
+systemctl enable sshd
 
 if grep -q '^vagrant:' /etc/passwd; then
     echo "Adding vagrant to sudoers"
@@ -74,7 +74,7 @@ echo "Setting up zypper repos ..."
 # so caching would just unnecessarily bloat the VM.
 #
 # -G disables GPG check for the repository.
-zypper ar -G -K -t yast2  file:///srv/tftpboot/suse-11.3/install SLES-11-SP3
+#zypper ar -G -K -t yast2  file:///srv/tftpboot/suse-11.3/install SLES-11-SP3
 #zypper ar -G -K -t rpm-md file:///srv/tftpboot/repos/SLES11-SP3-Updates SLES-11-SP3-Updates
 
 # We don't expect to install anything new from the SDK after booting up the appliance
