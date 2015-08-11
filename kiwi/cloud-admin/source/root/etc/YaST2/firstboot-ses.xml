@@ -65,7 +65,7 @@
                 <module>
                     <label>Host Name</label>
                     <enabled config:type="boolean">true</enabled>
-                    <name>inst_hostname</name>
+                    <name>firstboot_hostname</name>
                 </module>
                 <module>
                     <label>Network</label>
@@ -93,13 +93,15 @@
                     <name>firstboot_write</name>
                     <enable_back>no</enable_back>
                     <enable_next>no</enable_next>
-                </module>
+	    </module>
+	    <!--
                 <module>
                     <label>Finish Setup</label>
                     <name>inst_suseconfig</name>
                     <enable_back>no</enable_back>
                     <enable_next>no</enable_next>
-                </module>
+		</module>
+-->
                 <module>
                     <label>Finish Setup</label>
                     <name>inst_congratulate</name>
