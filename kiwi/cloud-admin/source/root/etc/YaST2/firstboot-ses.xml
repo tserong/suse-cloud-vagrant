@@ -73,12 +73,6 @@
                     <label>Network</label>
                     <name>inst_lan</name>
                     <enabled config:type="boolean">true</enabled>
-                </module>
-                <module>
-		    <label>Network</label>
-		    <!-- this step only restarts service 'network' -->
-		    <name>firstboot_network_write</name>
-		    <enabled config:type="boolean">true</enabled>
 		</module>
 		<module>
                     <label>ssh</label>
@@ -94,7 +88,12 @@
                     <label>NTP Client</label>
                     <enabled config:type="boolean">true</enabled>
                     <name>firstboot_ntp</name>
-                </module>
+		</module>
+		<module>
+		    <label>Restart Network</label>
+		    <name>firstboot_network_write</name>
+		    <enabled config:type="boolean">true</enabled>
+		</module>
                 <module>
                     <label>Finish Setup</label>
                     <name>firstboot_write</name>
