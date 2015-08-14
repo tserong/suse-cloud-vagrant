@@ -97,7 +97,7 @@ if journalctl | grep -q "DMI: SUSE Studio Testdrive"; then
     disable_kde_desktop_effects
 else
     echo "no"
-    rm /etc/X11/xorg.conf.d/50-*-testdrive.conf
+    rm -f /etc/X11/xorg.conf.d/50-*-testdrive.conf
 fi 
 
 enable_network_manager_if_required
