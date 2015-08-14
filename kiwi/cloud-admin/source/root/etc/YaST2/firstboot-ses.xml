@@ -62,12 +62,14 @@
                     <enabled config:type="boolean">true</enabled>
                     <name>inst_root</name>
                 </module>
-                <module>
+		<!--
+		<module>
                     <label>Host Name</label>
                     <enabled config:type="boolean">true</enabled>
                     <name>firstboot_hostname</name>
                 </module>
-                <module>
+		-->
+		<module>
                     <label>Network</label>
                     <name>inst_lan</name>
                     <enabled config:type="boolean">true</enabled>
