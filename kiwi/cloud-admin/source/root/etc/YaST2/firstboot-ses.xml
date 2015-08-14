@@ -69,9 +69,8 @@
                 </module>
                 <module>
                     <label>Network</label>
-                    <name>inst_proposal</name>
+                    <name>inst_lan</name>
                     <enabled config:type="boolean">true</enabled>
-                    <proposal>firstboot_network</proposal>
                 </module>
                 <module>
                     <label>ssh</label>
